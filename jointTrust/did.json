@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3c-ccg.github.io/lds-jws2020/contexts/v1/"
+  ],
+  "id": "did:web:raw.githubusercontent.com:robertokanzo:trust-framework:main:jointTrust",
+  "verificationMethod": [
+    {
+      "id": "did:web:raw.githubusercontent.com:robertokanzo:trust-framework:main:jointTrust#JWK2020-RSA",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "kty": "RSA",
+        "n":"tsf2IwPUBmF0prm-wRFnZpIKThdVJ2SDsryWd_BddIyBOsKODfCn9yRgbEcEMu2_JL3PUTVOkQg9Iv30J_zzB-etxNGU6p-epPoAwEwhgB-utux3IB7l0Yl2605GjKLdhNjOB_WEClKqs8-VPImCZcn4vCVRLu6VJkJRKDpK-seBQfitV1PnuYJgxaSlPmBTrFgQ8RKh_FWOn2xS_OFVUNNGBcRWTa_E_sZN-5bLd3HdgkAa7h8VJp10Tr7D5x5CJZf3be3XZGxOxYciK8SFs4uHyvPveyxtbB7bLMu5smJHtlJY8cM6oI2C0AUkKNnqkVd-VOv_u2XHWTgBb14oKw",
+        "e": "AQAB",
+        "alg": "RS256",
+        "x5u": "https://raw.githubusercontent.com/fransbKanzo/trustframework/main/jointTrust/certs/cert.pem"
+      }
+    },
+    {
+      "id": "did:web:raw.githubusercontent.com:robertokanzo:trust-framework:main:jointTrust#ed25519-key-1",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:raw.githubusercontent.com:fransbKanzo:trustframework:main:jointTrust",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "-IS2nYT_JJaGYjwyriQjQibwxFK-ToVILvrPalIJVhA"
+      }
+    }
+  ],
+  "assertionMethod": [
+    "did:web:raw.githubusercontent.com:robertokanzo:trust-framework:main:jointTrust#JWK2020-RSA",
+    "did:web:raw.githubusercontent.com:robertokanzo:trust-framework:main:jointTrust:jointTrust#ed25519-key-1"
+  ],
+  "authentication": [
+        "did:web:raw.githubusercontent.com:robertokanzo:trust-framework:main:jointTrust#ed25519-key-1"
+  ]
+}
